@@ -1,11 +1,10 @@
 <?php
 
 $conn = mysqli_connect(
-    "MYSQLHOST",
-    "MYSQLUSER",
-    "MYSQLPASSWORD",
-    "MYSQLDATABASE",
-    "MYSQLPORT"
+    getenv("MYSQLHOST"),
+    getenv("MYSQLUSER"),
+    getenv("MYSQLPASSWORD"),
+    getenv("MYSQLDATABASE"),
+    (int)getenv("MYSQLPORT")
 );
-
 ?>
