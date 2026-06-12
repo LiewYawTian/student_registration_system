@@ -1,10 +1,13 @@
 <?php
 
-$conn = mysqli_connect(
-    getenv("MYSQLHOST"),
-    getenv("MYSQLUSER"),
-    getenv("MYSQLPASSWORD"),
-    getenv("MYSQLDATABASE"),
-    (int)getenv("MYSQLPORT")
-);
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "student_registration";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
 ?>
