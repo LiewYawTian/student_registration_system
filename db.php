@@ -1,11 +1,11 @@
 <?php
 
 $conn = mysqli_connect(
-    "localhost",
-    "root",
-    "",
-    "student_registration",
-    3307
+    getenv("MYSQLHOST"),
+    getenv("MYSQLUSER"),
+    getenv("MYSQLPASSWORD"),
+    getenv("MYSQLDATABASE"),
+    (int)getenv("MYSQLPORT")
 );
 
 if (!$conn) {
